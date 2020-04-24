@@ -45,8 +45,8 @@
       width: auto;
       max-height: 670px;
     }
-    #more{display: none;}
-    #more p{
+    #more, #more2, #more3{display: none;}
+    #more p, #more2 p, #more3 p{
       padding: 5%;
     }
     .info-icon{
@@ -245,8 +245,22 @@
               <li><i class="icofont-check"></i> Aplikasi ini dapat memantau dan screening selama 14 hari progress perkembangan pasien</li>
               <li><i class="icofont-check"></i> Aplikasi ini juga terintegrasi dengan data pemerintah untuk memonitoring pergerakan dan persebaran Covid-19</li>
             </ul>
-            <a href="https://drive.google.com/file/d/1Zm5dsWoFQbAzLB0SDsOKD2I6dbNErauP/view?usp=sharing" btn-get-started scrollto><img src="https://smartsecvpn.com/wp-content/uploads/2018/02/direct-download-button.png" alt="" width="25%" class="google"></a>
-            <a href="https://play.google.com/store/apps/developer?id=zirolabs+technology" btn-get-started scrollto><img src="https://smartsecvpn.com/wp-content/uploads/2018/01/google-play.png" alt="" width="25%" class="google"></a>
+            <!-- <a href="https://drive.google.com/file/d/1Zm5dsWoFQbAzLB0SDsOKD2I6dbNErauP/view?usp=sharing" btn-get-started scrollto><img src="https://smartsecvpn.com/wp-content/uploads/2018/02/direct-download-button.png" alt="" width="25%" class="google"></a>
+            <a href="https://play.google.com/store/apps/developer?id=zirolabs+technology" btn-get-started scrollto><img src="https://smartsecvpn.com/wp-content/uploads/2018/01/google-play.png" alt="" width="25%" class="google"></a> -->
+            <a href="" class="btn-download">
+              <i class="fab fa-google-play fa-2x icon-btn-download"></i>
+              <div class="info-btn-download" id="info-btn-download">
+                <span>tersedia di</span>
+                <h5>Google Play Store</h5>
+              </div>
+            </a>
+            <a href="" class="btn-download">
+              <i class="fab fa-apple fa-2x icon-btn-download"></i>
+              <div class="info-btn-download info-btn-download-2">
+                <span>tersedia di</span>
+                <h5>App Store</h5>
+              </div>
+            </a>
           </div>
         </div>
 
@@ -271,7 +285,7 @@
                 <span id="dots">...</span>
                 <span>22 APRIL 2020</span>
                 <div class="social">
-                  <a onclick="myFunction()" id="myBtn">
+                  <a onclick="btn1()" id="myBtn">
                     Selengkapnya
                   </a>
                   <i class="fa fa-arrow-right info-icon"></i>
@@ -297,15 +311,15 @@
               <div class="data-info">
                 <h4>Menteri PPPA: 94 Perempuan-26 Anak Positif COVID-19
                 </h4>
-                <span id="dots">...</span>
+                <span id="dots2">...</span>
                 <span>22 APRIL 2020</span>
                 <div class="social">
-                  <a onclick="myFunction()" id="myBtn">
+                  <a onclick="btn2()" id="myBtn2">
                     Selengkapnya
                   </a>
                   <i class="fa fa-arrow-right info-icon"></i>
                    </br>
-                   <span id="more">
+                   <span id="more2">
                      <p class="text-justify">
                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -326,15 +340,15 @@
               <div class="data-info">
                 <h4>Pemerintah Putuskan Melarang Mudik, Kemenhub Siapkan Permenhub
                 </h4>
-                <span id="dots">...</span>
+                <span id="dots3">...</span>
                 <span>22 APRIL 2020</span>
                 <div class="social">
-                  <a onclick="myFunction()" id="myBtn">
+                  <a onclick="btn3()" id="myBtn3">
                     Selengkapnya
                   </a>
                   <i class="fa fa-arrow-right info-icon"></i>
                    </br>
-                   <span id="more">
+                   <span id="more3">
                      <p class="text-justify">
                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -616,16 +630,17 @@
     </script>
   <script src="assets/js/main.js"></script>
   <script>
-  function myFunction() {
+  function btn1() {
     var dots = document.getElementById("dots");
     var moreText = document.getElementById("more");
     var btnText = document.getElementById("myBtn");
+
 
     if (dots.style.display === "none") {
     dots.style.display = "inline";
     btnText.innerHTML = "Selengkapnya"; 
     moreText.style.display = "none";
-    $(".info-icon").removeClass("fa-arrow-left");
+    $(".info-icon").removeClass("fa-times");
     $(".info-icon").removeClass("info-icon-status");
     $("#myBtn").removeClass("info-icon-status");
     $(".info-icon").addClass("fa-arrow-right");
@@ -635,9 +650,59 @@
     moreText.style.display = "inline";
 
     $(".info-icon").removeClass("fa-arrow-right");
-    $(".info-icon").addClass("fa-arrow-left");
+    $(".info-icon").addClass("fa-times");
     $(".info-icon").addClass("info-icon-status");
     $("#myBtn").addClass("info-icon-status");
+    }
+  }
+
+  function btn2(){
+    var dots2 = document.getElementById("dots2");
+    var moreText2 = document.getElementById("more2");
+    var btnText2 = document.getElementById("myBtn2");
+
+    if (dots2.style.display === "none") {
+    dots2.style.display = "inline";
+    btnText2.innerHTML = "Selengkapnya"; 
+    moreText2.style.display = "none";
+    $(".info-icon").removeClass("fa-times");
+    $(".info-icon").removeClass("info-icon-status");
+    $("#myBtn2").removeClass("info-icon-status");
+    $(".info-icon").addClass("fa-arrow-right");
+    } else {
+    dots2.style.display = "none";
+    btnText2.innerHTML = "Tutup"; 
+    moreText2.style.display = "inline";
+
+    $(".info-icon").removeClass("fa-arrow-right");
+    $(".info-icon").addClass("fa-times");
+    $(".info-icon").addClass("info-icon-status");
+    $("#myBtn2").addClass("info-icon-status");
+    }
+  }
+
+  function btn3(){
+    var dots3 = document.getElementById("dots3");
+    var moreText3 = document.getElementById("more3");
+    var btnText3 = document.getElementById("myBtn3");
+
+    if (dots3.style.display === "none") {
+    dots3.style.display = "inline";
+    btnText3.innerHTML = "Selengkapnya"; 
+    moreText3.style.display = "none";
+    $(".info-icon").removeClass("fa-times");
+    $(".info-icon").removeClass("info-icon-status");
+    $("#myBtn3").removeClass("info-icon-status");
+    $(".info-icon").addClass("fa-arrow-right");
+    } else {
+    dots3.style.display = "none";
+    btnText3.innerHTML = "Tutup"; 
+    moreText3.style.display = "inline";
+
+    $(".info-icon").removeClass("fa-arrow-right");
+    $(".info-icon").addClass("fa-times");
+    $(".info-icon").addClass("info-icon-status");
+    $("#myBtn3").addClass("info-icon-status");
     }
   }
 </script>
