@@ -1010,7 +1010,7 @@ section {
   margin-bottom: 0;
 }
 
-@media (max-width: 1240px){
+@media (max-width: 1200px){
   .details img{
     max-height: 500px;
   }
@@ -1018,27 +1018,18 @@ section {
     text-align: center;
   }
   .details .order-2 a.btn-download{
-    width: 220px;
+    width: 200px;
     height: 60px;
     padding: 10px;
     display: inline-flex;
-    justify-content: flex-start;
-    margin: 1%;
-  }
-  .details .order-2 div.info-btn-download {
-    padding-left: 10%;
-  }
-  .details .order-2 .icon-btn-download {
-    padding-left: 3%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2%;
   }
   .details .order-2 div.info-btn-download > h5{
     font-size: 15px;
   }
-  .details .order-2 div.info-btn-download-2 > h6, div.info-btn-download-2 > h5{
-    font-size: 15px;
-    padding-left: 10px;
-  }
-  .details .order-2 div.info-btn-download > h6{
+  .details .order-2 div.info-btn-download > span{
     font-size: 12px;
   }
   .details .order-2 p{
@@ -1604,8 +1595,9 @@ section {
   border-radius: 15px 15px 15px 0px;
   display: inline-flex;
   padding: 0.5% 2%;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: center;
+
 }
 
 .btn-download:hover{
